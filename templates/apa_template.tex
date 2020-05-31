@@ -6,7 +6,7 @@ $if(colorlinks)$
 $endif$
 
 % apa6 mode and class options
-\documentclass[$if(classoption)$$mode$,longtable,$for(classoption)$$classoption$$sep$,$endfor$$else$$mode$,longtable$endif$$if(floatsintext)$,floatsintext$endif$]{apa6}
+\documentclass[$if(classoption)$$mode$,longtable,$for(classoption)$$classoption$$sep$,$endfor$$else$$mode$,longtable$endif$$if(floatsintext)$,floatsintext$endif$]{$documentclass$}
 
 % for mode selection options
 \usepackage{ifthen}

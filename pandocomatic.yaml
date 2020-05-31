@@ -266,7 +266,7 @@ templates:
       standalone: true
       template: templates/letter.latex
     metadata:
-      papersize: a4
+      papersize: letter
       return-address: 
         - Cognition \& Behaviour Platform
         - Institute of Neuroscience, CAS
@@ -274,10 +274,10 @@ templates:
         - 320 Yueyang Rd, Shanghai 200031, CHINA
         - ✉ <i.andolina@ion.ac.cn>
         - ✆ +86 021 54921747
-      author: 'Ian Max Andolina Ph.D.\newline Director, Cognition \& Behaviour Platform'
+      author: 'S. Bryan West\newline Ph.D. student\newline Department of Psychology, Cornell University'
       opening: To whom it may concern,
       closing: Sincerely yours,
-      mainfont: 'Graublau Sans'
+      mainfont: 'Palatino Linotype'
       mainfontoptions: 'Numbers=OldStyle,Numbers=Proportional'
       monofont: 'Fira Code'
       mathfont: 'Cambria Math'
@@ -285,7 +285,9 @@ templates:
       CJKmainfont: 'PingFang SC'
       fontsize: '11pt'
       linestretch: '1.2'
+      # TODO Replace with Cornell letterhead
       letterhead: "/Users/ian/Dropbox/Work/ION-Letterhead.pdf"
+      # TODO Replace with my signature
       signature: "/Users/ian/Dropbox/Work/Ian-Signature.png"
       signature-width: 45mm
       signature-before: -11ex
@@ -584,11 +586,15 @@ templates:
       standalone: true
       filter:
         - filters/assimilateMetadata
+        - pandoc-fignos
+        - pandoc-tablenos
+        - pandoc-citeproc
       template: templates/apa_template.tex
       shift-heading-level-by: 0
     metadata:
-      documentclass: 'apa6'
+      documentclass: apa7
       mode: man
+      papersize: letter
       classoption: 
         - noextraspace
         #- draftfirst
