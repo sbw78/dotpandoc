@@ -1,0 +1,14 @@
+standalone: true
+verbosity: INFO # verbose by default
+cite-method: citeproc
+bibliography: /Users/bryanwest/.local/share/pandoc/bibliography.bib #JSON faster than BIB, symlinked into Pandoc data dir
+csl: /Users/bryanwest/.local/share/pandoc/csl/apa.csl
+filters: 
+  - pandoc-citeproc # process citations
+  - pagebreak.lua # use \newpage{} also for HTML and docx
+reference-links: true
+metadata:
+  citation-abbreviations: /Users/bryanwest/.local/share/pandoc/cite-abbr.json # my journal abbreviations
+  reference-section-title: References
+  notes-after-punctuation: false
+  link-citations: true
