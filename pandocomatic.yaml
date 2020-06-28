@@ -162,10 +162,11 @@ templates:
     metadata:
       documentclass: 'article'
       classoption: twoside
-      pagestyle: headings # control \pagestyle{}: the default article class supports plain (default), empty (no running heads or page numbers), and headings (section titles in running heads)
+      pagestyle: 'default' # control \pagestyle{}: the default article class supports plain (default), empty (no running heads or page numbers), and headings (section titles in running heads)
       fontsize: '12pt'
-      linestretch: '1.5'
-      geometry: ['inner=2.2cm','outer=1.8cm','bottom=2.5cm','twoside']
+      linestretch: '2' # line spacing. Set this or doublespace, but not both
+      #doublespace: true # use double spacing?
+      geometry: ['margin=1in']
       mainfont: 'Palatino'
       mainfontoptions: 'Numbers=OldStyle,Numbers=Proportional'
       sansfont: 'Gill Sans'
@@ -175,9 +176,9 @@ templates:
       mathfontoptions: 'math-style=ISO,bold-style=ISO'
       CJKmainfont: 'Heiti SC'
       colorlinks: false
-      linkcolor: Mahogany
-      citecolor: Sepia
-      urlcolor: BrickRed
+      linkcolor: # Mahogany
+      citecolor: # Sepia
+      urlcolor: # BrickRed
       lang: 'en-US'
       nonumberfigures: true # I use Scrivener autonumbering, so disable for LaTeX
     postprocessors: 
@@ -294,7 +295,7 @@ templates:
       signature-after: -1.5ex
       closing-indentation: 12pt
       links-as-notes: false
-      colorlinks: true
+      colorlinks: false
       linkcolor: Mahogany
       citecolor: Sepia
       urlcolor: BrickRed
@@ -361,7 +362,7 @@ templates:
       CJKsansfont: 'PingFang SC'
       fontsize: '12pt'
       linestretch: '1.5'
-      colorlinks: true
+      colorlinks: false
       linkcolor: Mahogany
       citecolor: Sepia
       urlcolor: BrickRed
@@ -428,7 +429,7 @@ templates:
   latex-scholar:
     extends: [latex-refs]
     pandoc:
-      template: templates/pandoc-scholar.latex
+      template: templates/pandoc-scholar2.latex
     metadata: 
       fontsize: '12pt'
 #-----------------------------------------------------------------------------
@@ -605,8 +606,8 @@ templates:
         #volume:
         #ccoppy:
         #copnum:
-      # geometry: ['inner=2.2cm','outer=1.8cm','bottom=2.5cm','twoside']
-      geometry: ['reset', 'letterpaper', 'height=9in', 'width=6in', 'hmarginratio=1:1', 'vmarginratio=1:1', 'marginparsep=0pt', 'marginparwidth=0pt', 'headheight=15pt']
+      geometry: ['margin=1in']
+      # geometry: ['reset', 'letterpaper', 'height=9in', 'width=6in', 'hmarginratio=1:1', 'vmarginratio=1:1', 'marginparsep=0pt', 'marginparwidth=0pt', 'headheight=15pt']
       mainfont: 'Palatino'
       mainfontoptions: 'Numbers=OldStyle,Numbers=Proportional'
       sansfont: 'Gill Sans'
