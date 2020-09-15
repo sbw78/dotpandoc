@@ -30,8 +30,8 @@ list.each do |phrase|
 end
 
 # make quotes italicised
-output.gsub!(/\\begin\{quote\}/, '\begin{quote}\emph{')
-output.gsub!(/\\end\{quote\}/, '}\end{quote}')
+#output.gsub!(/\\begin\{quote\}/, '\begin{quote}\emph{')
+# output.gsub!(/\\end\{quote\}/, '}\end{quote}')
 
 # make isolated figures centered
 output.gsub!(/^\\includegraphics{/, '\\includegraphics[center]{')

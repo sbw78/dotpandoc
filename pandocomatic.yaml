@@ -161,8 +161,8 @@ templates:
       template: templates/custom.latex
     metadata:
       documentclass: 'article'
-      classoption: twoside
-      pagestyle: 'default' # control \pagestyle{}: the default article class supports plain (default), empty (no running heads or page numbers), and headings (section titles in running heads)
+      classoption: oneside
+      pagestyle: 'plain' # control \pagestyle{}: the default article class supports plain (default), empty (no running heads or page numbers), and headings (section titles in running heads)
       fontsize: '12pt'
       linestretch: '2' # line spacing. Set this or doublespace, but not both
       #doublespace: true # use double spacing?
@@ -172,7 +172,7 @@ templates:
       sansfont: 'Gill Sans'
       sansfontoptions: 'Numbers=OldStyle,Numbers=Proportional'
       monofont: 'Fira Code'
-      mathfont: 'Cambria Math'
+      mathfont: #'Cambria Math'
       mathfontoptions: 'math-style=ISO,bold-style=ISO'
       CJKmainfont: 'Heiti SC'
       colorlinks: false
@@ -429,7 +429,7 @@ templates:
   latex-scholar:
     extends: [latex-refs]
     pandoc:
-      template: templates/pandoc-scholar2.latex
+      template: templates/pandoc-scholar-custom.latex
     metadata: 
       fontsize: '12pt'
 #-----------------------------------------------------------------------------
