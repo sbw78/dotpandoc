@@ -326,7 +326,7 @@ $endif$
 $if(abstract)$
 \newpage
 \begin{abstract}
-\noindent$abstract$
+\noindent $abstract$
 \end{abstract}
 \keys
 $endif$

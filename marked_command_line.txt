@@ -1,0 +1,3 @@
+-f markdown_mmd+smart -t html5 -s --bibliography=/Users/bryanwest/.local/share/pandoc/bibliography.bib --csl=/Users/bryanwest/.local/share/pandoc/csl/apa.csl
+
+-f markdown+smart -t html5 -s --bibliography /Users/bryanwest/Desktop/slavery/bibliography.bib --csl /Users/bryanwest/.local/share/pandoc/csl/apa.csl
