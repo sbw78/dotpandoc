@@ -80,7 +80,7 @@ $endif$
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\ifundef{\abstract}{}{\patchcmd{\abstract}{\quotation}{\quotation\noindent\ignorespaces}{}{}}
+%\ifundef{\abstract}{}{\patchcmd{\abstract}{\quotation}{\quotation\noindent\ignorespaces}{}{}}
 
 \makeatletter
 \def\keys{%
@@ -317,16 +317,26 @@ $endfor$
   \vskip 1.5em}
 \makeatother
 
+\usepackage[document]{ragged2e}
+
 \begin{document}
 
 $if(title)$
 \maketitle
 $endif$
 
+\newpage
+
+\begin{RaggedRight}
+\setlength{\parindent}{0.5in}
+\section{Question}
+
+Question Text Here.
+
 $if(abstract)$
 \newpage
 \begin{abstract}
-\noindent $abstract$
+$abstract$
 \end{abstract}
 \keys
 $endif$
@@ -352,6 +362,8 @@ $if(lof)$
 $endif$
 \newpage
 $body$
+\end{RaggedRight}
+
 
 $if(natbib)$
 $if(bibliography)$

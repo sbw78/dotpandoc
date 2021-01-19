@@ -30,8 +30,7 @@ templates:
     pandoc:
       standalone: true
       verbose: true # verbose by default
-      filter: 
-        - pandoc-citeproc # process citations
+			citeproc: true
       lua-filter:
         - filters/pagebreak.lua # use \newpage{} also for HTML and docx
       bibliography: bibliography.bib #JSON faster than BIB, symlinked to Pandoc data dir
@@ -39,7 +38,6 @@ templates:
       citation-abbreviations: cite-abbr.json # my journal abbreviations
       reference-links: true
     metadata:
-      cite-method: citeproc
       reference-section-title: References
       notes-after-punctuation: false
       link-citations: true 
@@ -589,7 +587,8 @@ templates:
         - filters/assimilateMetadata
         - pandoc-fignos
         - pandoc-tablenos
-        - pandoc-citeproc
+        # - pandoc-citeproc
+				- --citeproc
       template: templates/apa_template.tex
       shift-heading-level-by: 0
     metadata:
